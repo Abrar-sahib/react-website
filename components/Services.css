@@ -1,0 +1,117 @@
+.services{
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+.services-text{
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.services-text span{
+    color: var(--color-bgl);
+    letter-spacing: 3px;
+    font-size: var(--fs-10);
+    
+}
+.services-text h2{
+    letter-spacing: 3px;
+    font-weight: var(--fw-bolder);
+    font-size: var(--fs-30);
+}
+.services-cards{
+    gap: 2rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.cards:hover .front{
+    display: none;
+}
+.cards:hover .back{
+    display: block;
+}
+.cards{
+    height: 25rem;
+    padding: 5px 5px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--color-bgl);
+    border-radius: 10px;
+    animation-name: fade-in;
+    animation-duration: 1s;
+}
+.back{
+    margin: 0 24px;
+    font-size: var(--fs-20);
+    font-weight: var(--fw-light);
+    color: var(--color-text);
+    width: 12rem;
+    text-align: center;
+    display: none;
+    animation-name: fade-in;
+    animation-duration: 1.5s;
+}
+@keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+.img{
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 1rem;
+}
+.first{
+    position: absolute;
+}
+.card-text{
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fs-20);
+    font-weight: var(--fw-bolder);
+    text-align: center;
+}
+.card-text>span{
+    height: 4rem;
+    width: 13rem;
+}
+.iconbg{
+    display: block;
+    overflow: hidden;
+    height: 15rem;
+}
+.circle{
+    padding: 10px;
+    border: 1px solid var(--color-bgl);
+    border-radius: 50%;
+    margin: 1rem 0;
+}
+
+@media only screen and (max-width: 1180px) {
+    .services-cards{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 5rem;
+    }
+
+}
+
+
+@media only screen and (max-width: 670px) {
+    .services-cards{
+        gap: 1rem;
+    }
+}
+@media only screen and (max-width: 610px) {
+    .services-cards{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}

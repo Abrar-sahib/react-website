@@ -1,0 +1,130 @@
+.container{
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex: 1;
+    background-color: var(--color-bgd);
+    width: 100%vw;
+}
+.logo{
+    margin: 0.5rem 2rem;
+    cursor: pointer;
+}
+.logo h1{
+    font-weight: var(--fw-bolder);
+    color: var(--color-text);
+    font-size: var(--fs-30);
+}
+.logo span{
+    color: var(--color-bgl);
+}
+.navlink{
+    margin-right: 4rem;
+}
+.navlinks{
+    padding: 0 1rem;
+    width: 30rem;
+    /* width: auto; */
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.navlinks li{
+    width: auto;
+    list-style: none;
+    color: var(--color-text);
+}
+.navlinks a{
+    /* padding: 0 0.5rem; */
+    transition: 0.2s ease-in-out;
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 13px;
+    text-transform: uppercase;
+}
+.navlinks a:hover{
+    color: var(--color-bgl);
+    font-size: 15px;
+    transition: 0.2s ease-in-out;
+}
+
+.bars,
+.close{
+    display: none;
+}
+
+
+
+@media only screen and (max-width: 1500px) {
+    .navlink{
+        margin-right: 2rem;
+    }
+    .navlinks{
+        gap: 2rem;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .navlink{
+        margin-right: 1rem;
+    }
+    .navlinks{
+        gap: 1rem;
+    }
+    .logo{
+        margin: 0.5rem 1rem;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .navlinks{
+        flex-direction: column;
+    }
+    .navlinks a{
+        font-size: 17px;
+    }
+    .container button{
+        display: block;
+    } 
+    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+        .navlink {
+          -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+        }
+    }
+    .navlink{
+        background: rgba(0,0,0,0.6);
+        position: fixed;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+        z-index: 9999;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1.5rem;
+		transition: 0.8s;
+		transform: translateY(-100%);
+    }
+    .nav-active{
+        transform: translateY(0%);
+    }
+    .close {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+    .bars{
+        margin-right: 1rem;
+    }
+    .bars,
+    .close{
+        color: white;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    
+}
