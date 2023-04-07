@@ -1,0 +1,224 @@
+.outer{
+    justify-content: center;
+    align-items: center;
+    margin: 0 3rem;
+}
+.blog-titel{
+    color: var(--color-text);
+    font-size: var(--fs-20);
+    font-weight: var(--fw-bolder);
+    margin-bottom: 1rem;
+}
+.cat{
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.blog-nav{
+    background-color: #d561ef6b;
+    backdrop-filter: blur(200px);
+    border-radius: 10px;
+    width: fit-content;
+    height: 4rem;
+    padding: 15px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.blog-navl{
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 4rem;
+}
+.blog-navl li{
+    list-style: none;
+    color: var(--color-text);
+    font-size: var(--fs-20);
+    font-weight: var(--fw-bolder);
+    color: var(--color-text);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.blog-navl li:hover{
+    transition: 0.3s ease-in-out;
+    color: var(--color-bg);
+    font-size: 25px;   
+}
+.active, .blog-navl button{ 
+    all: unset;
+}
+.blog-navl button{
+    all: unset;
+}
+.blog-dis{
+    margin: 0 5rem;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    animation-name: fade-in;
+    animation-duration: 1s;
+}
+.left{
+    justify-content: start;
+    align-items: start;
+    gap: 10px;
+    animation-duration: 1.5s;
+    animation-name: left;
+}
+.blog-dis-left{
+    animation-duration: 1.5s;
+    animation-name: left;
+    width: fit-content;
+    align-items: start;
+    justify-content: center;
+}
+.blog-dis-left h4{
+    font-size: var(--fs-20);
+    font-weight: var(--fw-bolder);
+    color: var(--color-bgl);
+    margin-bottom: 1rem;
+}
+.blog-dis-left h1{
+    font-size: var(--fs-30);
+    font-weight: var(--fw-bolder);
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+}
+.blog-dis-left h5{
+    font-size: var(--fs-10);
+    font-weight: var(--fw-bold);
+    color: var(--color-text);
+    margin-bottom: 1rem;
+    line-height: 20px;
+}
+.blog-dis-right{
+    width: 100%;
+    animation-duration: 1.5s;
+    animation-name: right;
+}
+.blog-dis-right img{
+    display: cover;
+    width: auto;
+    height: auto;
+}
+
+@keyframes left {
+    0% {
+        transform: translateX(-30%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(5%);
+        opacity: 0.5;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+}
+
+@keyframes right {
+    0% {
+      transform: translateX(30%);
+      opacity: 0;
+    }
+    50% {
+      transform: translateX(-5%);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+@media only screen and (max-width: 880px) {
+    .blog-navl{
+        gap: 2rem;
+    }
+    .blog-navl li:hover{
+        font-size: 23px;   
+    }
+}
+
+@media only screen and (max-width: 790px) {
+    .blog-navl li:hover{
+        font-size: 18px;   
+    }
+    .blog-navl{
+        gap: 1rem;
+    }
+    .blog-navl li{
+        font-size: var(--fs-15);
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    .blog-navl li:hover{
+        font-size: 13px;   
+    }
+    .blog-nav{
+        padding: 9px;
+        height: 2rem;
+    }
+    .blog-navl li{
+        font-size: var(--fs-10);
+    }
+    .blog-dis{
+        margin: 0 2rem;
+    }
+    .blog-dis-left h4{
+        font-size: var(--fs-15);
+        margin-bottom: 0.2rem;
+    }
+    .blog-dis-left h1{
+        font-size: var(--fs-20);
+        margin-bottom: 0.2rem;
+    }
+    .blog-dis-left h5{
+        font-weight: var(--fw-light);
+        line-height: 12px;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .outer{
+        margin: 0 1rem;
+    }
+    .blog-dis{
+        margin: 0 1rem;
+    }
+}
+@media only screen and (max-width: 430px) {
+    .blog-dis{
+        flex-direction: column;
+    }
+    .cat{
+        gap: 0.5rem;
+        flex-direction: row;
+    }
+    .blog-nav{
+        margin: 0;
+        height: fit-content;
+        width: fit-content;
+        flex-direction: column;
+    }
+    .blog-navl{
+        flex-direction: column;
+    }
+    .blog-dis{
+        gap: 1rem;
+    }
+    .left{
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .left h1{
+        width: 12rem;
+        line-height: 25px;
+    }
+    .blog-dis-right{
+        display: none;
+    }
+}

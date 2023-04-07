@@ -1,0 +1,215 @@
+.section{
+    margin-top: 4rem;
+}
+.secion-center{
+    align-items: center;
+    justify-content: center;
+    /* margin: 0 1rem; */
+}
+.fade{
+  animation-duration: 1.5s;
+  animation-name: drop-down;
+}
+.serCard{
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+.serLeft{
+    height: fit-content;
+    width: fit-content;
+    padding: 5px;
+    align-items: start;
+    justify-content: start;
+}
+.serLeft span{
+    font-weight: var(--fw-bolder);
+    font-size: var(--fs-30);
+    color: var(--color-bgl);
+}
+.serLeft h5{
+    margin-top: 0.5rem;
+    font-weight: var(--fw-bolder);
+    font-size: var(--fs-10);
+    color: var(--color-text);
+    width: 8rem;
+}
+.arrows{
+    gap: 3rem;
+    margin-top: 4rem;
+    margin-right: 1rem;
+}
+.arrows div{
+    height: 2em;
+    width: 2em;
+    cursor: pointer;
+}
+.arrows div:hover {
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+.serRight h1{
+    font-weight: var(--fw-bolder);
+    font-size: var(--fs-50);
+    color: var(--color-text);
+    width: 35rem;
+    line-height: 3.5rem;
+}
+.serRight h5{
+    margin-top: 1rem;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-10);
+    color: var(--color-text);
+    width: 30rem;
+    line-height: 1.5rem;
+}
+.serRight span{
+    margin-top: 0.5rem;
+    content: "";
+    display: block;
+    background-color: white;
+    width: 5rem;
+    height: 3px;
+    border-radius: 2px;
+}
+
+@keyframes drop-down {
+  0% {
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(5%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+@media only screen and (max-width: 850px) {
+  .serLeft span{
+    font-weight: var(--fw-semi-bold);
+    font-size: var(--fs-20);
+  }
+  .serLeft h5{
+    font-weight: var(--fw-semi-bold);
+    font-size: var(--fs-10);
+    width: 8rem;
+  }
+  .serRight span{
+      width: 2rem;
+      height: 2px;
+    }
+    .arrows{
+      gap: 2rem;
+      margin-top: 1.5rem;
+      margin-right: 1rem;
+    }
+  .arrows div{
+      height: 1em;
+      width: 1em;
+      cursor: pointer;
+    }
+  .serRight h1{
+    font-size: var(--fs-30);
+    width: 25rem;
+    line-height: 2rem;
+  }
+  .serRight h5{
+    margin-top: 1rem;
+    font-size: var(--fs-10);
+    width: 20rem;
+    line-height: 1rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .secion-center{
+    justify-content: center;
+    align-items: start;
+    padding: 01px;
+  }
+  .serCard{
+    flex-direction: column;
+    gap: 0;
+  }
+  .serLeft{
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .serLeft span{
+    margin: 0;
+    font-weight: var(--fw-semi-bold);
+    font-size: var(--fs-20);
+
+  }
+  .serLeft h5{
+    margin: 0;
+    font-weight: var(--fw-semi-bold);
+    font-size: var(--fs-10);
+    width: 8rem;
+  }
+  .arrows{
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    /* margin-top: 1.5rem; */
+    /* margin-right: 1rem; */
+  }
+.arrows div{
+    height: 1em;
+    width: 1em;
+    cursor: pointer;
+  }
+  .serRight{
+    justify-content: center;
+    align-items: start;
+  }
+  .serRight h1{
+    margin: 0;
+    padding: 0;
+    font-size: var(--fs-20);
+    width: fit-content;
+    line-height: 2rem;
+  }
+  .serRight h5{
+    margin-top: 0.5rem;
+    font-size: var(--fs-10);
+    width: 20rem;
+    line-height: 1rem;
+  }
+
+}
+@media only screen and (max-width: 600px) {
+  .serCard{
+    align-items: center;
+    justify-content: center;
+  }
+  .serLeft{
+    align-items: center;
+    justify-content: center;
+  }
+  .serRight{
+    align-items: center;
+    justify-content: center;
+  }
+  .serRight h5{
+    width: 18rem;
+  }
+}
